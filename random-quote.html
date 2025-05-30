@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Random Quote Generator</title>
+    <style>
+        body {
+            background-color: #7FC8D6;
+            color: #FFFFFF;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        #quote {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        #author {
+            font-size: 20px;
+        }
+    </style>
+    <script src="quotes.js"></script>
+</head>
+<body>
+    <div id="quote"></div>
+    <div id="author"></div>
+    <script>
+        var quotes = [
+            {quote: "The only way to do great work is to love what you do.", author: "Steve Jobs"},
+            {quote: "The future belongs to those who believe in the beauty of their dreams.", author: "Eleanor Roosevelt"},
+            {quote: "It does not matter how slowly you go as long as you do not stop.", author: "Confucius"},
+            // Add more quotes here
+        ];
+        var randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+        document.getElementById('quote').innerHTML = randomQuote.quote;
+        document.getElementById('author').innerHTML = "- " + randomQuote.author;
+    </script>
+</body>
+</html>
